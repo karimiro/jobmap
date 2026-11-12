@@ -1,10 +1,10 @@
 {
-  "at": "2026-11-12T03:34:54.319Z",
+  "at": "2026-11-12T14:13:37.579Z",
   "report": {
     "rekrute": {
       "scraped": 10,
-      "withCity": 9,
-      "added": 9
+      "withCity": 10,
+      "added": 10
     },
     "marocannonces": {
       "scraped": 9,
@@ -17,10 +17,8 @@
       "added": 44
     },
     "anapec": {
-      "scraped": 15,
-      "withCity": 14,
-      "added": 15
+      "error": "fetch failed"
     }
   },
-  "total": 77
+  "total": 93
 }
