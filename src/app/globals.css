@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+html,
+body {
+  height: 100%;
+  background: #070d14;
+  color: #e2e8f0;
+  overscroll-behavior: none;
+}
+
+/* ===== City markers on the map ===== */
+.city-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  will-change: transform;
+}
+.city-marker:hover {
+  transform: scale(1.08);
+}
+.city-marker.is-selected .city-dot {
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.85),
+    0 0 26px rgba(56, 189, 248, 0.65) !important;
+}
+
+.city-dot {
+  width: var(--s, 24px);
+  height: var(--s, 24px);
+  border-radius: 9999px;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #06121f;
+  background: radial-gradient(circle at 30% 30%, #7dd3fc, #0ea5e9 55%, #0369a1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 14px rgba(14, 165, 233, 0.55);
+}
+
+.city-name {
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #f1f5f9;
+  text-align: center;
+  line-height: 1.1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.city-name small {
+  display: block;
+  font-size: 9px;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+/* ===== Slim scrollbar ===== */
+.scroll-slim::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-slim::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+
+/* ===== MapLibre tweaks ===== */
+.maplibregl-ctrl-attrib {
+  background: rgba(0, 0, 0, 0.55) !important;
+  color: #94a3b8;
+  font-size: 10px !important;
+}
+.maplibregl-ctrl-attrib a {
+  color: #94a3b8;
+}
+.maplibregl-ctrl-group {
+  background: rgba(10, 18, 32, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.maplibregl-ctrl-group button + button {
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon,
+.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon {
+  filter: invert(1);
+}

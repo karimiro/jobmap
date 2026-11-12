@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-12T03:34:54.319Z",
+  "report": {
+    "rekrute": {
+      "scraped": 10,
+      "withCity": 9,
+      "added": 9
+    },
+    "marocannonces": {
+      "scraped": 9,
+      "withCity": 8,
+      "added": 9
+    },
+    "alwadifa": {
+      "scraped": 44,
+      "withCity": 25,
+      "added": 44
+    },
+    "anapec": {
+      "scraped": 15,
+      "withCity": 14,
+      "added": 15
+    }
+  },
+  "total": 77
+}

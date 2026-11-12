@@ -1,0 +1,37 @@
+# Auto-scrape Moroccan job boards every 2 hours.
+# Runs scripts/scrape.mjs (Rekrute, MarocAnnonces, Alwadifa, Anapec)
+# and commits the updated SQLite database back to the repo.
+
+name: Auto-scrape jobs
+
+on:
+  schedule:
+    - cron: "0 */2 * * *" # every 2 hours (UTC)
+  workflow_dispatch: # also allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24 # node:sqlite (DatabaseSync) needs Node 22+
+
+      - name: Run scraper
+        run: node scripts/scrape.mjs
+
+      - name: Commit updated database
+        run: |
+          git config user.name "jobmap-bot"
+          git config user.email "actions@github.com"
+          git pull --rebase origin main || true
+          git add data/jobs.db data/last-run.json
+          git diff --cached --quiet || git commit -m "🔄 auto-scrape $(date -u '+%Y-%m-%d %H:%M') UTC"
+          git push
