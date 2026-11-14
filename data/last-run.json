@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-14T00:33:11.035Z",
+  "at": "2026-11-14T08:18:03.592Z",
   "report": {
     "rekrute": {
       "scraped": 10,
@@ -20,5 +20,5 @@
       "error": "fetch failed"
     }
   },
-  "total": 176
+  "total": 177
 }
