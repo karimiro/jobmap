@@ -1,15 +1,15 @@
 {
-  "at": "2026-11-17T05:40:16.595Z",
+  "at": "2026-11-17T15:08:42.980Z",
   "report": {
     "rekrute": {
       "scraped": 10,
-      "withCity": 7,
-      "added": 9
+      "withCity": 5,
+      "added": 10
     },
     "marocannonces": {
-      "scraped": 7,
-      "withCity": 7,
-      "added": 6
+      "scraped": 19,
+      "withCity": 18,
+      "added": 17
     },
     "alwadifa": {
       "scraped": 47,
@@ -20,5 +20,5 @@
       "error": "fetch failed"
     }
   },
-  "total": 269
+  "total": 294
 }
