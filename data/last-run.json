@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-19T14:54:06.078Z",
+  "at": "2026-11-19T22:49:25.083Z",
   "report": {
     "rekrute": {
       "scraped": 10,
@@ -7,18 +7,18 @@
       "added": 10
     },
     "marocannonces": {
-      "scraped": 0,
-      "withCity": 0,
-      "added": 0
+      "scraped": 8,
+      "withCity": 7,
+      "added": 8
     },
     "alwadifa": {
       "scraped": 47,
-      "withCity": 26,
+      "withCity": 24,
       "added": 47
     },
     "anapec": {
       "error": "fetch failed"
     }
   },
-  "total": 352
+  "total": 370
 }
